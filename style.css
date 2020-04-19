@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+}
+
+.window {
+	width: 400px;
+	height: 300px;
+	margin: 100px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.window .imga {
+	position: relative;
+}
+
+.window .imga img {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transition: all 0.5s; /* 动画 0.5 秒完成 */
+}
+
+.window .imga img.current {
+	transform: translateX(0);
+	z-index: 1; /* 当前轮播图保持在最上面 */
+}
+
+.window .imga img.leave {
+	transform: translateX(-100%); /* 沿 x 轴反向偏移 100% */
+}
+
+.window .imga img.enter {
+	transform: translateX(100%); /* 沿 x 轴偏移 100% */
+}
